@@ -3,10 +3,14 @@ import java.util.Arrays;
 // сортировка выбором
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] array = new int[] {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        int[] array = new int[]{64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
 
+        selectionSort(array);
+    }
+
+    public static void selectionSort(int[] array) {
         for (int step = 0; step < array.length; step++) {
-            System.out.println(Arrays.toString(array));
+         //   System.out.println(Arrays.toString(array));
             int index = min(array, step);
 
             int tmp = array[step];
